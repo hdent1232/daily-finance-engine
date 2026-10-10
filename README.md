@@ -1,61 +1,72 @@
-# TBT Engine
+# DFE — Daily Finance Engine
 
-A desktop trading app that automatically runs two ICT futures strategies —
-**KTBT** (Kaiyan's Top/Bottom Tick) and **RTBT** (RichK0J's "Rich Off Ticks")
-— on NQ, MNQ, ES, MES, GC and MGC. It pairs a paper-trading simulator and deep
-calendar backtesting with a full analytics suite (Monte Carlo, walk-forward,
-MAE/MFE), prop-firm rule presets, and optional live trading through Interactive
-Brokers, a desktop bridge (NinjaTrader/Quantower), Rithmic, or Tradovate.
+A Windows desktop app for investing in the US stock market and planning your own money, built so
+that every number it shows can be traced to where it came from and every rule it enforces is
+written down once.
 
-## Download & run
+![Invest: the book the engine would hold, and what getting there would cost](images/invest-book.png)
 
-1. Go to **[Releases](../../releases/latest)** and download **`TBTEngine.exe`**.
-2. Double-click it. A small window opens and your browser shows the dashboard.
-3. To quit: click **Quit** in the dashboard, or close that window.
+## What is in it
 
-Windows SmartScreen may warn that it's from an unknown publisher (the app
-isn't code-signed) — click **More info → Run anyway**.
+**Invest — the Desmond Equity Engine.** A long/short engine over the S&P 500, built in seven layers
+that each answer for the one below:
 
-## Features
+| layer | what it does |
+|---|---|
+| 1. Data | daily prices, fundamentals, estimates and filings, stored point-in-time so a backtest only ever sees what was knowable on the day |
+| 2. Scores | each stock scored on value, quality, momentum, revisions and more, against its own sector |
+| 3. Analyst | an optional language-model read of earnings, from the AI provider you choose |
+| 4. Book | the portfolio built from the scores — Markowitz or a conviction tilt — at the size you set |
+| 5. Risk desk | position, sector, beta, exposure and drawdown limits checked before any trade, every minute of the session |
+| 6. Execution | orders sent to your broker (Alpaca or Interactive Brokers) or filled in the app's own simulator |
+| 7. Reporting | performance, attribution, turnover and slippage, against buy-and-hold |
 
-**Strategies & engine**
-- Two ICT strategies (KTBT, RTBT) across six instruments — NQ, MNQ, ES, MES, GC, MGC.
-- Strategy Lab: tune parameters and save named profiles, with built-in eval-safe / lower-risk / high-win-rate presets.
-- Export any strategy as a TradingView Pine Script.
+Several portfolios can run side by side, each with its own account, method, size and risk limits.
 
-**Simulator & live trading**
-- Paper-trading simulator on live data, with a "why no trade?" diagnostic and a feed-stall watchdog.
-- Optional live/demo trading via Interactive Brokers, the NinjaTrader or Quantower desktop bridges, Rithmic, or Tradovate.
-- Native bracket orders (entry + stop + target), auto-reconnect, crash/restart recovery, and naked-position alerts.
+**Money — the Ashford Allocation Engine.** Every paycheck allocated to the dollar across bills,
+debts, savings and investing, from your own accounts and statements. It suggests each move with its
+reason and never moves money itself. In this release its engine and its setup are in the app; its
+everyday screens arrive in 2.9.7.
 
-**Backtesting & analysis**
-- Calendar backtesting against years of local data (the free feed tops up recent dates automatically).
-- Performance analytics — profit factor, expectancy, R-multiple distribution, monthly breakdown, daily P&L calendar, MAE/MFE.
-- Monte Carlo robustness + risk-of-ruin, walk-forward optimization, and parameter-sensitivity sweeps.
-- Day chart with trade overlays and bar-by-bar replay; side-by-side profile comparison; multi-symbol batch backtests.
-- Filter, sort, search and export trades (CSV / JSON).
+![Money: setting up the Ashford Allocation Engine](images/money-setup.png)
 
-**Risk & prop-firm tools**
-- Prop-firm presets (Lucid, Apex) with trailing-drawdown and consistency rules.
-- Prop Eval Tracker — live progress toward the profit target, drawdown room, and consistency limit.
-- Account-blow kill-switch, break-even-after-TP1, and round-trip commission modeling.
+**Swing**, **Overnight** and **Futures** — trading strategies kept for research. Every backtest
+charges real costs and is judged against buy-and-hold and a risk-matched bar, and the app says so
+plainly when a strategy shows no edge.
 
-**Automation & quality of life**
-- Schedule the bot to start/stop — and even launch itself — on a daily, timezone-aware schedule.
-- Phone push notifications (with quiet hours), a first-run setup wizard, and a per-trade journal.
-- Black-box recorder + diagnostics (searchable and downloadable), and settings/profiles backup & restore.
-- Keyboard shortcuts, light/dark theme, and one-click self-update from GitHub.
+![Swing: a backtest with its costs charged, against buy-and-hold](images/swing-backtest.png)
+
+## Accounts
+
+For now, every portfolio runs in the app's simulator or on a broker's **paper** account, and live
+order routing is switched off: an account that is not a paper account is refused before anything
+is sent. Live accounts open in 3.0.0.
+
+## Download and run
+
+1. Open **[Releases](../../releases/latest)** and download **`DailyFinanceEngine.exe`**.
+2. Double-click it. The dashboard opens.
+
+Windows SmartScreen may say the app is from an unknown publisher, because it is not code-signed.
+Choose **More info → Run anyway**.
 
 ## Updating
 
-You only download the exe once. After that, open the dashboard, scroll to
-**App Updates**, and click **Check for updates → Install & restart**. The app
-replaces itself with the newest release here and restarts — no re-downloading.
+Download the app once. After that, **Check for updates → Install & restart** in the app replaces it
+with the newest release here and restarts it. Earlier builds named `DailyTradeEngine.exe` update the
+same way.
 
-## Notes
+## Privacy
 
-- This repository only hosts the compiled app. Nothing about your accounts,
-  credentials, or settings is stored here — those live only on your own PC.
-- Trading futures carries substantial risk of loss. The app ships in safe
-  simulation mode; live trading is gated behind explicit confirmations.
-  Nothing here is financial advice.
+This repository holds only the compiled app and this page. Your data, settings, broker logins and
+keys live only on your own PC, in the app's data folder, and are never uploaded. Every release is
+scanned for personal data before it is published. The pictures on this page were taken on a
+throwaway copy of the app holding market data only.
+
+## Coming next
+
+- **2.9.7** — the rebuilt interface: Money, Invest and Trading as three sections, in their own window.
+- **2.9.8** — portfolios A to E side by side, each paycheck's plan and budget in Money, and the
+  analyst's evidence held to account.
+- **2.9.9** — every part verified end to end.
+- **3.0.0** — live accounts.
