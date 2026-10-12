@@ -4,9 +4,9 @@ A Windows desktop app for investing in the US stock market and planning your own
 that every number it shows can be traced to where it came from and every rule it enforces is
 written down once.
 
-![Invest: the book the engine would hold, and what getting there would cost](images/invest-book.png)
+![Invest: today's book, what needs you, and how it stands against the S&P 500](images/invest-today.png)
 
-## What is in it
+## Three sections, one app
 
 **Invest — the Desmond Equity Engine.** A long/short engine over the S&P 500, built in seven layers
 that each answer for the one below:
@@ -24,17 +24,22 @@ that each answer for the one below:
 Several portfolios can run side by side, each with its own account, method, size and risk limits.
 
 **Money — the Ashford Allocation Engine.** Every paycheck allocated to the dollar across bills,
-debts, savings and investing, from your own accounts and statements. It suggests each move with its
-reason and never moves money itself. In this release its engine and its setup are in the app; its
-everyday screens arrive in 2.9.7.
+debts, savings and investing, from your own accounts and statements or typed by hand. Each move is
+suggested with its reason, approved or turned down one at a time, and marked moved once you have
+moved it; the app never moves money itself. A budget is proposed for every spending line, and a
+calendar shows every bill and paycheck to come.
 
-![Money: setting up the Ashford Allocation Engine](images/money-setup.png)
+![Money: today's moves and where you stand](images/money-today.png)
 
-**Swing**, **Overnight** and **Futures** — trading strategies kept for research. Every backtest
-charges real costs and is judged against buy-and-hold and a risk-matched bar, and the app says so
-plainly when a strategy shows no edge.
+**Trading** — the swing, overnight and futures desks, together under one section and marked under
+construction while they are rebuilt.
 
-![Swing: a backtest with its costs charged, against buy-and-hold](images/swing-backtest.png)
+## Make it yours
+
+Colours, corners, density, navigation and the layout of each page are settings, and each section
+can wear its own colours. Every term the app uses explains itself when you point at it.
+
+![Settings: appearance and layout](images/settings-appearance.png)
 
 ## Accounts
 
@@ -45,7 +50,7 @@ is sent. Live accounts open in 3.0.0.
 ## Download and run
 
 1. Open **[Releases](../../releases/latest)** and download **`DailyFinanceEngine.exe`**.
-2. Double-click it. The dashboard opens.
+2. Double-click it. The app opens in its own window.
 
 Windows SmartScreen may say the app is from an unknown publisher, because it is not code-signed.
 Choose **More info → Run anyway**.
@@ -60,13 +65,12 @@ same way.
 
 This repository holds only the compiled app and this page. Your data, settings, broker logins and
 keys live only on your own PC, in the app's data folder, and are never uploaded. Every release is
-scanned for personal data before it is published. The pictures on this page were taken on a
-throwaway copy of the app holding market data only.
+scanned for personal data before it is published. The pictures on this page show the app's
+built-in sample data: no real account, holding or household appears in them.
 
 ## Coming next
 
-- **2.9.7** — the rebuilt interface: Money, Invest and Trading as three sections, in their own window.
-- **2.9.8** — portfolios A to E side by side, each paycheck's plan and budget in Money, and the
-  analyst's evidence held to account.
+- **2.9.8** — portfolios A to E side by side, the Strategy Lab's own rules, and the analyst's
+  evidence held to account.
 - **2.9.9** — every part verified end to end.
 - **3.0.0** — live accounts.
