@@ -57,9 +57,19 @@ Choose **More info → Run anyway**.
 
 ## Updating
 
-Download the app once. After that, **Check for updates → Install & restart** in the app replaces it
-with the newest release here and restarts it. Earlier builds named `DailyTradeEngine.exe` update the
-same way.
+Download the app once. After that, the app looks for a new release each time it opens; **Update
+ready** beside the version opens **Settings → Updates**, where **Install** replaces the app with the
+newest release here. Earlier builds named `DailyTradeEngine.exe` update the same way.
+
+**Settings → Updates → Channel** chooses which releases you get:
+
+- **Core** takes a build once every check has passed on it.
+- **Nightly** takes it the moment it is built, while the checks run.
+
+A build a check fails is marked faulty and offered to nobody, and an app running one is offered the
+last good build.
+
+![Settings: updates and the channel](images/settings-updates.png)
 
 ## Privacy
 
