@@ -1,5 +1,11 @@
 # DFE — Daily Finance Engine
 
+> [!NOTE]
+> **CORE CHANNEL** &nbsp; [![Newest core build](https://img.shields.io/github/v/release/hdent1232/daily-finance-engine?label=core&color=2e7d32)](https://github.com/hdent1232/daily-finance-engine/releases/latest)
+>
+> Every build here has passed every check on the code it was built from. Builds published the moment they are made,
+> while those checks run, are on the **[Nightly channel → daily-finance-engine-nightly](https://github.com/hdent1232/daily-finance-engine-nightly)**.
+
 A Windows desktop app for investing in the US stock market and planning your own money, built so
 that every number it shows can be traced to where it came from and every rule it enforces is
 written down once.
@@ -64,7 +70,8 @@ newest release here. Earlier builds named `DailyTradeEngine.exe` update the same
 **Settings → Updates → Channel** chooses which releases you get:
 
 - **Core** takes a build once every check has passed on it.
-- **Nightly** takes it the moment it is built, while the checks run.
+- **Nightly** takes it the moment it is built, while the checks run. Nightly builds are published on their own
+  page, [daily-finance-engine-nightly](https://github.com/hdent1232/daily-finance-engine-nightly).
 
 A build a check fails is marked faulty and offered to nobody, and an app running one is offered the
 last good build.
